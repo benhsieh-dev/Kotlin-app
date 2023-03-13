@@ -11,14 +11,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnClickMe = findViewById<Button>(R.id.mybutton)
-        btnClickMe.setOnClickListener {
-            btnClickMe.text = "Kotlin app"
-        }
-
         val txtClickMe = findViewById<TextView>(R.id.textView)
+
+        var timesClicked = 0
+
+
         btnClickMe.setOnClickListener {
-            btnClickMe.text = "Kotlin app"
-            txtClickMe.text = "Kotlin developer"
+            timesClicked += 1
+            txtClickMe.text = timesClicked.toString()
         }
     }
 }
